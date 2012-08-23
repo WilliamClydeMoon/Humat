@@ -1,0 +1,146 @@
+﻿head{margin:0; padding :0}
+body
+{
+    font-size:62.5%; 
+    margin :0px;
+    padding :0px;
+    background-color:Blue;
+    width:100%;
+    height :100%
+}
+/*
+#container
+{
+   min-height:100%;
+   position:relative;
+}
+*/
+    
+.topcontent
+{   position:absolute;
+    margin:0;
+    padding:0;
+    top:0em;
+    left:0em;
+    width :100%
+}
+.topcontent.image
+{   
+   height:10em;
+}
+
+.topcontent.text
+{
+   position:absolute;
+    top:2em; 
+    left:50%;
+    width:15em;
+    /*font-family :Daniel;*/
+    font-size:4em;
+}
+
+.logOn
+{
+    position:absolute;
+    font-family: Verdana, Helvetica, sans-serif;
+    right:5em;
+    top:0em;
+    height: 1.2em;
+    font-size:2em;
+}
+
+.button {
+  background-color:transparent;
+  border: 0;
+  border-bottom: .01em solid #B22222;
+  color: #B22222;
+  cursor: pointer;
+  /*margin: 0;
+  padding: 0;*/
+}
+.button a.hover
+{
+    color:Blue;
+}
+#masterbody
+{
+    position:relative ;
+    top:24em;
+    float:right;
+    width:100%;
+    font-size : 1.5em;
+    background-color: White;
+    text-indent:1em;
+    text-align:left
+}
+#masterfooter
+{
+    position:absolute;
+    bottom :0em;
+    width:100%;
+    /*clear:both;*/
+    height: 4em;
+    background-color:transparent ;
+}
+
+#subheader
+{
+	position:absolute;
+	background-color:transparent;
+	top:26em;
+	left:60%;
+	height: 2em;
+	padding-left: 2em;
+	padding-top: 0em;
+    text-align: right;
+}
+
+#subheader a
+{
+    color: #B22222; /*#daa520;*/
+    font-family: Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size:  2em;
+    font-weight: bold;
+    line-height: 2em;
+    padding-right: 1em;
+    text-align: left;
+}
+
+#subheader a:hover
+{
+	color: white;
+}
+
+
+
+#leftbody
+{   
+    left :0px;
+    width:30%;
+    background-color: Yellow;
+}
+/*
+.text#missionStatement
+{
+    font-family:  Daniel,Vani ,Lucida Sans Unicode  ;
+    font-weight:Bolder;
+    font-size:1.6em;
+    margin-right :25em;
+    margin-top:.5em;
+    border-color:Green;
+    width:16em;
+    height:7.5em;
+    color :White;
+}
+
+#logo
+{
+    position :absolute;
+    margin-top:0em;
+    height :15em;
+    padding:0em;
+    margin-left:0em;
+    width :100%;
+}*/
+

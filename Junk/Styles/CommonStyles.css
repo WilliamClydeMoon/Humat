@@ -1,0 +1,98 @@
+﻿body
+{
+    margin :0px;
+    padding :0px;
+    background-color:firebrick;
+    width:100%;
+}
+#masterheader
+{
+    height: 125px;
+    background-color: Aqua;
+}
+#leftbody
+{   
+    left :0px;
+    width:240px;
+    background-color: Yellow;
+}
+#masterbody
+{
+    float:right;
+    width:852px;
+    background-color: White;
+    text-indent:10px;
+    text-align:left
+}
+#masterfooter
+{
+    clear:both;
+    height: 16px;
+    background-color: Olive;
+}
+
+#subheader
+{
+	position: relative;
+	background: maroon;
+	height: 30px;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+
+#subheader a
+{
+    color: #daa520;
+    font-family: Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size:  12px;
+    font-weight: bold;
+    line-height: 16px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+
+#subheader a:hover
+{
+	color: white;
+}
+
+#logoncontent 
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    margin-top:0;
+    height: 12px;
+    text-align:right;
+    color:White;
+    margin-right:10px;
+    font-size:16px;
+}
+
+.button {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid blue;
+  color: blue;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+#topcontent
+{
+    
+}
+#missionStatement
+{
+    font-family:  Daniel,Vani ,Lucida Sans Unicode  ;
+    font-weight:Bolder;
+    font-size:100%;
+    margin-right :250px;
+    margin-top:5px;
+    border-color:Green;
+    width:250px;
+    height:75px;
+    color :Black;
+
+}

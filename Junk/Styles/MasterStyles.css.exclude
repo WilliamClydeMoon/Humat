@@ -1,0 +1,104 @@
+﻿body, html, form 
+{
+    font-size: 100%;
+    font-family :Geneva, Arial, Helvetica, sans-serif;
+    margin :0px;
+    padding :0px;
+    background-color:Maroon ;
+    width:100%;
+}
+
+#logoncontent 
+{
+    margin-top:0;
+    height: 12px;
+    text-align:right;
+    color:White;
+    margin-right:10px;
+    font-family:Arial;
+    font-size:16px;
+}
+#masterheader
+{
+    text-align: right;
+    color: White;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    height: 150px;
+    background-color:Aqua;
+}
+#leftbody
+{
+    width: 230px;    
+    font-size: 90%;
+    text-align: left;
+    left: 0px;
+    background-color:Yellow;
+}
+#masterbody
+{
+    float:right;
+    width:800px;
+    text-align: center;
+    padding: 10px;
+    height:500%;
+    background-color: blue; 
+    /*font-size:14px;*/
+    font-size:100%
+}
+
+#masterfooter
+{
+    clear:both ;
+    text-align: center;
+    padding: 5px;
+    height:66px;
+    background-color:Olive;
+}
+
+
+
+
+/*#signon{      margin-top:0px    }*/
+#topcontent{    height:100px;border-color:Black; }
+ul#topcontentblock li{ display:inline-block; vertical-align: top ;}    
+
+#missionStatement
+{
+    font-family:Daniel;
+    font-weight: bold;
+    font-size:100%;
+    margin-right :250px;
+    margin-top:5px;
+    border-color:Green;
+    width:250px;
+    height:75px;
+    color :White;
+    background-color:Black;
+}
+#logo
+{
+    position :absolute;
+    margin-top:0px;
+    height :150px;
+    padding:0px;
+    margin-left:0px;
+    float :left;
+}
+
+
+a:link, a:hover, a:active { color: black; }
+a:visited { color: grey; }
+a { color: #00f; }
+a:hover { color: #0f0; }
+
+.button {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid blue;
+  color: blue;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
