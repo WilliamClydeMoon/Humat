@@ -4,49 +4,78 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MasterBody" Runat="Server">
-    <asp:PasswordRecovery ID="PasswordRecovery" runat="server" EnableViewState="false" o>
-        <UserNameTemplate>
-            <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">
-                <tr>
-                    <td>
-                        <table cellpadding="0">
-                            <tr>
-                                <td align="center" colspan="2">
-                                    Forgot Your Password?</td>
-                            </tr>
-                            <tr>
-                                <td align="center" colspan="2">
-                                    Enter your User Name to receive your password.</td>
-                            </tr>
-                            <tr>
-                                <td align="right">
-                                    <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" 
-                                        ControlToValidate="UserName" ErrorMessage="User Name is required." 
-                                        ToolTip="User Name is required." ValidationGroup="PasswordRecovery">*</asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="center" colspan="2" style="color:Red;">
-                                    <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" colspan="2">
-                                    <asp:Button ID="SubmitButton" runat="server" CommandName="Submit" Text="Submit" 
-                                        ValidationGroup="PasswordRecovery" />
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </UserNameTemplate>
-
-    </asp:PasswordRecovery>
-
+<asp:PasswordRecovery OnVerifyingUser="validateUserEmail" 
+      SuccessText="Your password was successfully reset and emailed to you."
+      QuestionFailureText="Incorrect answer. Please try again." 
+      runat="server" ID="PWRecovery" 
+      UserNameFailureText="Username not found.">
+    <MailDefinition IsBodyHtml="true" BodyFileName="~/Account/email.txt"
+           From="YourEmailAddress@YourDomain.com" 
+           Subject="Password Reset" 
+           Priority="High">
+    </MailDefinition>
+    <UserNameTemplate>
+        <p>The steps below will allow you to have 
+           a new password sent to the registered email address.</p>
+        <dl>
+            <dt>Username</dt>
+            <dd>
+                <asp:TextBox ID="Username" runat="server" />
+            </dd>
+            <dt>Email</dt>
+            <dd>
+                <asp:TextBox ValidationGroup="PWRecovery" 
+                   runat="server" ID="EmailAddressTB">
+                </asp:TextBox>
+            </dd>
+            <dt></dt>
+            <dd>
+                <asp:Button ID="submit" 
+                   CausesValidation="true" 
+                   ValidationGroup="PWRecovery" 
+                   runat="server"
+                   CommandName="Submit" 
+                   Text="Submit" />
+            </dd>
+            <dt></dt>
+            <dd>
+                <p class="Error"><asp:Literal ID="ErrorLiteral" 
+                         runat="server"></asp:Literal>
+                </p>
+            </dd>
+        </dl>
+    </UserNameTemplate>
+    <QuestionTemplate>
+        Hello
+        <asp:Literal runat="server" ID="personname" />,
+        <p>
+            You must answer your recovery question 
+            in order to have a new email sent to you.
+        </p>
+        <dl>
+            <dt>Question:</dt>
+            <dd>
+                <asp:Literal runat="server" ID="Question" />
+            </dd>
+            <dt></dt>
+            <dt>Answer:</dt>
+            <dd>
+                <asp:TextBox runat="server" ID="Answer" />
+            </dd>
+            <dt></dt>
+            <dd>
+                <asp:Button runat="server" ID="submit" 
+                  Text="Submit" CommandName="submit" />
+            </dd>
+            <dt></dt>
+            <dd>
+                <p class="Error">
+                    <asp:Literal ID="FailureText" runat="server">
+    </asp:Literal>
+    </p>
+            </dd>
+        </dl>
+    </QuestionTemplate>
+</asp:PasswordRecovery>
 </asp:Content>
 

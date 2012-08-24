@@ -29,9 +29,7 @@ public partial class Account_Login : System.Web.UI.Page
 
     protected void LoginUser_LoggedIn(object sender, EventArgs e)
     {
-        //MyShoppingCart usersShoppingCart = new MyShoppingCart();
-        //String cartId = usersShoppingCart.GetShoppingCartId();
-        //usersShoppingCart.MigrateCart(cartId, LoginUser.UserName);
+
 
         if (Session["LoginReferrer"] != null)
         {

@@ -32,11 +32,12 @@
                  </a>
              </div>
         </asp:ContentPlaceHolder>
+
     <div id="subheader" class="style1">
         <a id="A1" href="~/Default.aspx" runat="server" title="">Home</a>
-        <a id="A2" href="~/Effort.aspx" runat="server" title="">Effort</a>
-        <a id="A3" href="~/Account/ForgotPassword.aspx" runat="server" title="">Resources</a>
-        <a id="A4" href="~/Media.aspx" runat="server" title="">Media</a>
+        <a id="A2" href="~/Account/ChangePassword.aspx" runat="server" title="">Change password</a>
+        <a id="A3" href="~/Account/PasswordReset.aspx" runat="server" title="">Password Reset</a>
+        <a id="A4" href="~/Media.aspx" runat="server" title="">Test Email</a>
         <a id="A6" href="~/AboutUs.aspx" runat="server" title="">About Us</a>
     </div>
      <div id="masterbody">
