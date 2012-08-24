@@ -35,7 +35,7 @@ public partial class Account_Login : System.Web.UI.Page
 
         if (Session["LoginReferrer"] != null)
         {
-            //Response.Redirect(Session["LoginReferrer"].ToString());
+            Response.Redirect(Session["LoginReferrer"].ToString());
         }
 
         Session["UserName"] = LoginUser.UserName;

@@ -21,12 +21,13 @@ body
     margin:0;
     padding:0;
     top:0em;
-    left:0em;
+    /*left:0em;*/
     width :100%
 }
-.topcontent.image
+.topcontent#HeadLogo
 {   
-   height:10em;
+   height:25em;
+   left:10em;
 }
 
 .topcontent.text
@@ -624,7 +625,7 @@ fieldset
 {
     margin: 1em 0px;
     padding: 1em;
-    border: .01em solid #ccc;
+    border: .1em solid #B22222	; /*#ccc;*/
 }
 
 fieldset p 
@@ -642,6 +643,22 @@ fieldset label.inline
     display: inline;
 }
 
+fieldset.button
+{
+  font-family: Verdana, Helvetica, sans-serif;  
+  font-size:1em;  
+  background-color:transparent;
+  border: 0;
+  border-bottom: .1em solid #B22222;
+  color: #B22222;
+  cursor: pointer;
+}
+
+fieldset.button a.hover
+{
+    color:Blue;
+}
+
 legend 
 {
     font-size: 1.1em;
@@ -651,14 +668,18 @@ legend
 
 input.textEntry 
 {
-    width: 32.em;
-    border: .01em solid #ccc;
+    height :2em;
+    width: 32em;
+    font-size: 1em;
+    border: .1em solid #B22222	; /*#ccc;*/
 }
 
 input.passwordEntry 
 {
-    width: 32.em;
-    border: .01em solid #ccc;
+    height :2em;
+    width: 32em;
+    font-size: 1em;    
+    border: .1em solid #B22222	;/*#ccc;*/
 }
 
 div.accountInfo

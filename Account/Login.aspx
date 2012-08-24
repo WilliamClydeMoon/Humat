@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Account_Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <%--<link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />--%>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MasterBody" Runat="Server">
     <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false" onloggedin="LoginUser_LoggedIn">
@@ -13,14 +12,14 @@
                 <fieldset class="login" style="width: 100%">
                     <p>
                     <br />
-                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Email Address: <br/></asp:Label>
+                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
                         <asp:TextBox ID="UserName" runat="server" CssClass="textEntry"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" 
                              CssClass="failureNotification" ErrorMessage="User Name is required." ToolTip="User Name is required." 
                              ValidationGroup="LoginUserValidationGroup">*</asp:RequiredFieldValidator>
                     </p>
                     <p>
-                        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:<br/></asp:Label>
+                        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
                         <asp:TextBox ID="Password" runat="server" CssClass="passwordEntry" TextMode="Password"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" 
                              CssClass="failureNotification" ErrorMessage="Password is required." ToolTip="Password is required." 
@@ -35,14 +34,16 @@
                 <p class="submitButton">
                     <asp:ImageButton ID="LoginButton" runat="server" CommandName="Login" ValidationGroup="LoginUserValidationGroup" ImageUrl="~/Styles/Images/sign_in_now.gif" />
                 </p>
-                 <a id="A1" class="button" style="font-size:1em; " href="~/Account/Register.aspx" runat="server" title="">Forgot your Password</a>
-
+                    
+<%--                <a class="button" href="~/Account/PasswordReset.aspx" runat="server" title="">Forgot Password?</a>
+                 <a class="button" href="~/Effort.aspx" runat="server" title="">Test Forgot Password?</a>--%>
                 </fieldset>
                 <%--<p style="padding: 20px;">--%>
-                <p
-                 If you are a new user and you don't have an account, then register for one now.  <br /><br />
+                <p>
+                        <a id="A1" class="button" href="PasswordReset.aspx" runat="server" title="">Forgot Password?</a>
+<%--                 If you are a new user and you don't have an account, then register for one now.  <br /><br />--%>
 
-                      <a class="button" style="font-size:1.5em; " href="~/Account/Register.aspx" runat="server" title="">Register</a>
+                        <a class="button" href="~/Account/Register.aspx" runat="server" title="">Register</a>
                  </p>
             </div>
         </LayoutTemplate>
