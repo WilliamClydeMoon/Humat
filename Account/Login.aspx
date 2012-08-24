@@ -34,13 +34,13 @@
                 <p class="submitButton">
                     <asp:ImageButton ID="LoginButton" runat="server" CommandName="Login" ValidationGroup="LoginUserValidationGroup" ImageUrl="~/Styles/Images/sign_in_now.gif" />
                 </p>
-                    
-<%--                <a class="button" href="~/Account/PasswordReset.aspx" runat="server" title="">Forgot Password?</a>
-                 <a class="button" href="~/Effort.aspx" runat="server" title="">Test Forgot Password?</a>--%>
+                 <%-- <a id="A1" class="button" href="PasswordReset.aspx" runat="server" title="">Forgot Password?</a> --%>  
+              <a class="button" href="~/Account/PasswordReset.aspx" runat="server" title="">Forgot Password?</a>
+ <%--                  <a class="button" href="~/Effort.aspx" runat="server" title="">Test Forgot Password?</a>--%>
                 </fieldset>
                 <%--<p style="padding: 20px;">--%>
                 <p>
-                        <a id="A1" class="button" href="PasswordReset.aspx" runat="server" title="">Forgot Password?</a>
+                       
 <%--                 If you are a new user and you don't have an account, then register for one now.  <br /><br />--%>
 
                         <a class="button" href="~/Account/Register.aspx" runat="server" title="">Register</a>

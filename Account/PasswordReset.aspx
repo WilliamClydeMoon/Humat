@@ -4,8 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MasterBody" Runat="Server">
-<p This is a test for password reset </p>
-<%--    <asp:PasswordRecovery ID="PasswordRecovery" runat="server" EnableViewState="false" o>
+    <asp:PasswordRecovery ID="PasswordRecovery" runat="server" EnableViewState="false" o>
         <UserNameTemplate>
             <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">
                 <tr>
@@ -47,7 +46,7 @@
             </table>
         </UserNameTemplate>
 
-    </asp:PasswordRecovery>--%>
+    </asp:PasswordRecovery>
 
 </asp:Content>
 
