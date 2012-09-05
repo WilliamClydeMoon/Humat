@@ -38,6 +38,7 @@
         <a id="A2" href="~/Account/ChangePassword.aspx" runat="server" title="">Change password</a>
         <a id="A3" href="~/Account/PasswordReset.aspx" runat="server" title="">Password Reset</a>
         <a id="A4" href="~/Media.aspx" runat="server" title="">Test Email</a>
+        <a id="A5" href="~/Account/UserDetails.aspx" runat="server" title="">User Details</a>
         <a id="A6" href="~/AboutUs.aspx" runat="server" title="">About Us</a>
     </div>
      <div id="masterbody">

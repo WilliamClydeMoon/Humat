@@ -4,6 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MasterBody" Runat="Server">
+
 <asp:PasswordRecovery OnVerifyingUser="validateUserEmail" 
       SuccessText="Your password was successfully reset and emailed to you."
       QuestionFailureText="Incorrect answer. Please try again." 
@@ -76,6 +77,7 @@
             </dd>
         </dl>
     </QuestionTemplate>
+
 </asp:PasswordRecovery>
 </asp:Content>
 
