@@ -5,16 +5,21 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MasterBody" Runat="Server">
 
-<asp:PasswordRecovery OnVerifyingUser="validateUserEmail" 
+<asp:PasswordRecovery
+      OnVerifyingUser="validateUserEmail" 
       SuccessText="Your password was successfully reset and emailed to you."
       QuestionFailureText="Incorrect answer. Please try again." 
       runat="server" ID="PWRecovery" 
       UserNameFailureText="Username not found.">
-    <MailDefinition IsBodyHtml="true" BodyFileName="~/Account/email.txt"
-           From="YourEmailAddress@YourDomain.com" 
-           Subject="Password Reset" 
-           Priority="High">
+
+    <MailDefinition 
+            IsBodyHtml="true" 
+            BodyFileName="~/Files/PasswordReset.txt"
+            From="YourEmailAddress@YourDomain.com" 
+            Subject="Password Reset" 
+            Priority="High">
     </MailDefinition>
+
     <UserNameTemplate>
         <p>The steps below will allow you to have 
            a new password sent to the registered email address.</p>

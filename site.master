@@ -28,7 +28,7 @@
                         <LoggedInTemplate>
                             Log Out
                         </LoggedInTemplate>
-                        </asp:LoginView>
+                    </asp:LoginView>
                  </a>
              </div>
         </asp:ContentPlaceHolder>

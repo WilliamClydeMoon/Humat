@@ -1,0 +1,13 @@
+
+
+<p>Thank you for registering with Humat.org</p>
+<p>You have now joined a network of humanitarians, connected to make the world a better place.</p>
+
+<p>Please confirm your registration by clicking this link:</p>
+
+
+
+<a href="http://localhost:57438/Humat/Account/RegisterConfirmation.aspx?token=1098e709-aaca-4335-ad13-b4250d945c9b">http://localhost:57438/Humat/Account/RegisterConfirmation.aspx?token=1098e709-aaca-4335-ad13-b4250d945c9b</a>
+
+
+

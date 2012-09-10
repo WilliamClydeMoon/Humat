@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
+using System.Net.Mail;
+
 
 public partial class Account_Register : System.Web.UI.Page
 {
@@ -13,20 +15,44 @@ public partial class Account_Register : System.Web.UI.Page
         RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
     }
 
-    protected void RegisterUser_CreatedUser(object sender, EventArgs e)
-    {
-        FormsAuthentication.SetAuthCookie(RegisterUser.UserName, false /* createPersistentCookie */);
+    //protected void RegisterUser_CreatedUser(object sender, EventArgs e)
+    //{
+    //    FormsAuthentication.SetAuthCookie(RegisterUser.UserName, false /* createPersistentCookie */);
+    //    string continueUrl = RegisterUser.ContinueDestinationPageUrl;
+    //    if (String.IsNullOrEmpty(continueUrl))
+    //    {
+    //        continueUrl = "~/";
+    //    }
 
+    //    MembershipUser member = Membership.GetUser(RegisterUser.UserName);
+    //    member.IsApproved = false;
+    //    Membership.UpdateUser(member);
+
+    //    Response.Redirect(continueUrl);
+    //}
+
+    protected void RegisterUser_SendMail(object sender, MailMessageEventArgs e)
+    {
+
+        FormsAuthentication.SetAuthCookie(RegisterUser.UserName, false /* createPersistentCookie */);
         string continueUrl = RegisterUser.ContinueDestinationPageUrl;
         if (String.IsNullOrEmpty(continueUrl))
-        {
-            continueUrl = "~/";
-        }
+        { continueUrl = "~/"; }
 
-        //MyShoppingCart usersShoppingCart = new MyShoppingCart();
-        //String cartId = usersShoppingCart.GetShoppingCartId();
-        //usersShoppingCart.MigrateCart(cartId, RegisterUser.UserName);
+        MembershipUser member = Membership.GetUser(RegisterUser.UserName);
+        member.IsApproved = false;
+        Membership.UpdateUser(member);
 
-        Response.Redirect(continueUrl);
+
+        String VerifyUrl = 
+            Request.Url.GetLeftPart(UriPartial.Authority) +
+            Page.ResolveUrl("~/Account/RegisterConfirmation.aspx?Token=" +  
+            member.ProviderUserKey.ToString());
+
+        
+        e.Message.Body = e.Message.Body.Replace("<%VerifyUrl%>", VerifyUrl);
+
+        
+
     }
 }

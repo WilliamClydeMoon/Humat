@@ -12,7 +12,7 @@
 
         <p>
         <asp:Label Id= lblFirstName runat="server" Text="First Name"></asp:Label>
-        <asp:TextBox Id= TxbFirstName runat="server">        </asp:TextBox>
+        <asp:TextBox Id= txbFirstName runat="server">        </asp:TextBox>
         </p>
 
         <p>
@@ -50,7 +50,15 @@
         <asp:TextBox Id = txbPhone runat="server">        </asp:TextBox>
         </p> 
 
-    <asp:Button ID="UserDetailsSubmit" runat="server" Text="Submit" />
+        <p>
+        <asp:Label Id = lblSurname runat="server" Text="Sur Name"></asp:Label>
+        <asp:TextBox Id = txbSurname runat="server">        </asp:TextBox>
+        </p> 
+
+
+
+    <asp:Button ID="UserDetailsSubmit" runat="server" Text="Submit" 
+            onclick="UserDetailsSubmit_Click" />
 
 </asp:Panel>        
 
