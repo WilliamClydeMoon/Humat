@@ -14,7 +14,7 @@
 
     <MailDefinition 
             IsBodyHtml="true" 
-            BodyFileName="~/Files/PasswordReset.txt"
+            BodyFileName="~/Files/PasswordReset.htm"
             From="YourEmailAddress@YourDomain.com" 
             Subject="Password Reset" 
             Priority="High">

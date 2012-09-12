@@ -15,21 +15,6 @@ public partial class Account_Register : System.Web.UI.Page
         RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
     }
 
-    //protected void RegisterUser_CreatedUser(object sender, EventArgs e)
-    //{
-    //    FormsAuthentication.SetAuthCookie(RegisterUser.UserName, false /* createPersistentCookie */);
-    //    string continueUrl = RegisterUser.ContinueDestinationPageUrl;
-    //    if (String.IsNullOrEmpty(continueUrl))
-    //    {
-    //        continueUrl = "~/";
-    //    }
-
-    //    MembershipUser member = Membership.GetUser(RegisterUser.UserName);
-    //    member.IsApproved = false;
-    //    Membership.UpdateUser(member);
-
-    //    Response.Redirect(continueUrl);
-    //}
 
     protected void RegisterUser_SendMail(object sender, MailMessageEventArgs e)
     {
@@ -43,6 +28,10 @@ public partial class Account_Register : System.Web.UI.Page
         member.IsApproved = false;
         Membership.UpdateUser(member);
 
+        string absolutepath = Request.Url.AbsolutePath;
+        string absoluteuri = Request.Url.AbsoluteUri;
+        string LeftPart = Request.Url.GetLeftPart(UriPartial.Authority);
+        string resolve = Page.ResolveUrl("~/Account/RegisterConfirmation.aspx");
 
         String VerifyUrl = 
             Request.Url.GetLeftPart(UriPartial.Authority) +

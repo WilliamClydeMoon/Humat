@@ -132,7 +132,7 @@
          </WizardSteps>
                 <MailDefinition 
                    IsBodyHtml="true" 
-                   BodyFileName="~/Files/NewAccountTemplate.htm"
+                   BodyFileName="~/Files/RegisterEmailTemplate.htm"
                    From="YourEmailAddress@YourDomain.com" 
                    Subject="Humat Registration E-mailConfirmation --- DO NOT REPLY" 
                    Priority="High">
