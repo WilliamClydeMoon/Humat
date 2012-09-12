@@ -10,6 +10,7 @@
 *.suo
 *.force
 *.bak
+*.config
 */bin/Debug/*
 */bin/Release/*
 */obj/*
