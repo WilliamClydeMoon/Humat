@@ -4,14 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MasterBody" Runat="Server">
-    <li>About Us</li>
-    <li>two</li>
-    <li>three</li>
-    <li>
-    Now is the time for all the good ment to come to the aid for the girls...three
-    Now is the time for all the good ment to come to the aid for the girls...three
-    Now is the time for all the good ment to come to the aid for the girls...three
-    Now is the time for all the good ment to come to the aid for the girls...three
-    </li>
+                <asp:Image runat="server" id = "DefaultLogo"
+                     ImageUrl="~/Images/AboutUs.jpg" />
 </asp:Content>
 

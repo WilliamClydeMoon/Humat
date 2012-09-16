@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/NewStyleSheet.css" rel="stylesheet" type="text/css" />
     <title></title>
     <asp:ContentPlaceHolder ID="Head" runat="server">
     </asp:ContentPlaceHolder>
@@ -12,25 +12,71 @@
     <form id="form" runat="server">
         <asp:ContentPlaceHolder ID="MasterHeader" runat="server">
             <div class="topcontent">
-                <asp:Image runat="server" id = "HeadLogo"
-                     ImageUrl="Images/titlebar_new.png" 
-                />
-                <div class="text">
-                    <p Our mission is to connect charitable individuals, organizations, and resources. </p>
-                </div>
-            </div>
-            <div class="logOn">
-                 <a href="~/Account/Login.aspx" runat="server" class="SiteLinkBold">
-                    <asp:LoginView ID="MenuLoginView" runat="server">
+    <div Class = "ImageFrame">
+        <div>
+
+                    <asp:Image runat="server" class = "masterImage" id = "Image3" 
+                    ImageUrl="~/NewImages/MainPageFace.png" />
+        </div>
+        </br></br></br>
+        <div>
+                    <asp:Image runat="server" class = "masterImage" id = "Image4" 
+                    ImageUrl="~/NewImages/ButtonExplore.png" />
+        </div>
+        </br></br></br>
+       <%-- SIGNON PANEL --%>
+        <div >
+            <div >
+                <div class="logOnPanel">
+                    <a id="A7" href="~/Account/Login.aspx" runat="server" class="SiteLinkBold">
+                        <asp:LoginView ID="MenuLoginView" runat="server">
                         <AnonymousTemplate>
                             Sign In
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             Log Out
                         </LoggedInTemplate>
-                    </asp:LoginView>
-                 </a>
-             </div>
+                        </asp:LoginView>
+                    </a>
+                </div>
+                <%--Username/Password --%>
+                <%--<table Id="signOnFrame">
+                    <tr id = "logon" >
+
+                        <td><img src="NewImages/LabelUserName.png" alt="username"/> <img class ="textbox" src="NewImages/TextBoxGeneric.png"  /></td>  
+                        <td><img src="NewImages/LabelPassword.png"/> <img class ="textbox" src="NewImages/TextBoxGeneric.png" /> </td>
+                    </tr>
+                    <tr>
+                        <td><img src="NewImages/CheckBoxLoggedInStatic.png"/> Keep me logged in</td>
+                        <td class="ActionButton" >Forgot my password</td>
+                    </tr>
+                </table>--%>
+            </div>
+        </div>
+
+        <div>
+           </br></br></br>
+            <p class="ActionButton"><img  runat="server" src="~/NewImages/ButtonRegister.png"/></p>
+           </br></br></br>
+        </div>
+
+        <%-- ABOUT & BLOGS PANEL style="text-align:center;style="width:100%;"--%>
+        <div >
+            <div >
+                <table Id="BottomFrame">
+                    <tr>
+                        <td class="ActionButton"><img  runat="server" src="~/NewImages/ButtonWhoWeAre.png" /></td>
+                        <td class="ActionButton"><img  runat="server" src="~/NewImages/ButtonNewsBlog.png" /></td>
+                    </tr>
+                    <tr>
+                        <td><img  runat="server" src="~/NewImages/PanelAbout.png" /></td>
+                        <td><img  runat="server" src="~/NewImages/PanelBlog.png" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div> 
+</div>
         </asp:ContentPlaceHolder>
 
     <div id="subheader" class="style1">
@@ -41,13 +87,16 @@
         <a id="A5" href="~/Account/UserDetails.aspx" runat="server" title="">User Details</a>
         <a id="A6" href="~/AboutUs.aspx" runat="server" title="">About Us</a>
     </div>
+     
      <div id="masterbody">
         <asp:ContentPlaceHolder ID="MasterBody" runat="server">
         </asp:ContentPlaceHolder>
     </div>
+
     <div id="masterfooter">
         <asp:ContentPlaceHolder ID="MasterFooter" runat="server">
             <div id="footerContent">
+                copyright @ 2012 humat,llc. allrights reserved.
             </div>
         </asp:ContentPlaceHolder>
     </div>

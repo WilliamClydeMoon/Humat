@@ -1,0 +1,62 @@
+﻿body 
+{
+    position:relative;
+    font-size:62.5%; 
+    margin :0px;
+    padding :0px;
+    width:100%;
+    height :100%;
+    text-align:center;
+    background-color:Black;
+    /*background-image:url('~/NewImages/MasterBackGround.jpg');TO DO fix absolute path to work*/
+    background-image:url('http://localhost:57438/Humat/NewImages/BackGroundMaster.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+}
+.ImageFrame
+{
+    border:0
+    padding:0;
+    text-align:center;
+
+}
+#signOnFrame
+{
+   margin:0 auto;
+   color:Yellow;
+   font-size:3em; 
+}
+#BottomFrame
+{
+   margin: 0 auto;
+}
+.ActionButton
+{
+}
+.textbox
+{
+    height:45px;
+}
+.logOnPanel
+{
+    color:White ;
+    font-size:5em;
+}
+.logOnGet
+{
+   margin: 0 auto; 
+   color:White ;
+   font-size:5em;   
+}
+input
+{
+
+    height:35px;
+    background-image:url(http://localhost:57438/Humat/NewImages/TextBoxGeneric.png)
+}
+#footerContent
+{
+    color:White ;
+    font-size:2em;    
+}

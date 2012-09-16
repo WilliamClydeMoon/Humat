@@ -13,12 +13,16 @@
                 CssClass="failureNotification" 
                 ValidationGroup="LoginUserValidationGroup"
             />
-            <div class="accountInfo">
-                <fieldset class="login" style="width: 100%">
-                    <p>
-                    <br />
-                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
-                        <asp:TextBox ID="UserName" runat="server" CssClass="textEntry"></asp:TextBox>
+            <div class="accountInfo"><p>test</p>
+                <table class="logOnGet">
+                    <tr>
+                        <td>
+                            <%--UserNameLabelTextBox--%>
+                            <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
+                            <asp:TextBox ID="UserName" runat="server" CssClass="textEntry"></asp:TextBox>
+                        </td>
+                    
+
                         <asp:RequiredFieldValidator 
                             ID="UserNameRequired" 
                             runat="server" 
@@ -28,10 +32,15 @@
                             ToolTip="User Name is required." 
                             ValidationGroup="LoginUserValidationGroup">*
                          </asp:RequiredFieldValidator>
-                    </p>
-                    <p>
-                        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
-                        <asp:TextBox ID="Password" runat="server" CssClass="passwordEntry" TextMode="Password"></asp:TextBox>
+
+                    
+                        <td>
+                            <%--PasswordLabelTextBox--%>
+                            <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
+                            <asp:TextBox ID="Password" runat="server" CssClass="passwordEntry" TextMode="Password"></asp:TextBox>                
+                        </td>
+                    </tr>
+
                         <asp:RequiredFieldValidator 
                             ID="PasswordRequired" 
                             runat="server" 
@@ -41,30 +50,29 @@
                             ToolTip="Password is required." 
                             ValidationGroup="LoginUserValidationGroup">*
                          </asp:RequiredFieldValidator>
-                    </p>
-                        
-                    <p>
+
+                        <%--RemberMeCheckBoxLabel--%>
                         <asp:CheckBox ID="RememberMe" runat="server"/>
                         <asp:Label ID="RememberMeLabel" 
                             runat="server" 
                             AssociatedControlID="RememberMe" 
                             CssClass="inline">Keep me signed-in on this computer.</asp:Label>
-                    </p>
-                
-                <p class="submitButton">
+
+                  <%--SubmitButton--%>                
+                  <%--class="submitButton">
                     <asp:ImageButton 
                         ID="LoginButton" 
                         runat="server" 
                         CommandName="Login" 
                         ValidationGroup="LoginUserValidationGroup" 
-                        ImageUrl="~/Styles/Images/sign_in_now.gif" />
-                </p>
-
+                        ImageUrl="~/Styles/Images/sign_in_now.gif" 
+                        />--%>
+                
+                  <%--Anchors--%>  
                   <a class = "LogOnButton" href="~/Account/PasswordReset.aspx" runat="server" title="">Forgot Password</a>
                   <a id="A1" class="LogOnButton" href="~/Account/Register.aspx" runat="server" title="">Register</a>
 
-                </fieldset>
-
+                </table>
             </div>
         </LayoutTemplate>
     </asp:Login>

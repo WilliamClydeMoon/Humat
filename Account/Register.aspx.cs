@@ -28,10 +28,10 @@ public partial class Account_Register : System.Web.UI.Page
         member.IsApproved = false;
         Membership.UpdateUser(member);
 
-        string absolutepath = Request.Url.AbsolutePath;
-        string absoluteuri = Request.Url.AbsoluteUri;
-        string LeftPart = Request.Url.GetLeftPart(UriPartial.Authority);
-        string resolve = Page.ResolveUrl("~/Account/RegisterConfirmation.aspx");
+        //string absolutepath = Request.Url.AbsolutePath;
+        //string absoluteuri = Request.Url.AbsoluteUri;
+        //string LeftPart = Request.Url.GetLeftPart(UriPartial.Authority);
+        //string resolve = Page.ResolveUrl("~/Account/RegisterConfirmation.aspx");
 
         String VerifyUrl = 
             Request.Url.GetLeftPart(UriPartial.Authority) +

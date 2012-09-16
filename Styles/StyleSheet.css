@@ -1,10 +1,11 @@
 ﻿head{margin:0; padding :0}
 body
 {
+
+    
     font-size:62.5%; 
     margin :0px;
     padding :0px;
-    background-color:Blue;
     width:100%;
     height :100%
 }
@@ -17,12 +18,16 @@ body
 */
     
 .topcontent
-{   position:absolute;
+{   /*position:absolute;*/
     margin:0;
     padding:0;
     top:0em;
     /*left:0em;*/
-    width :100%
+    width :100%;
+    background-image:url('~/NewImages/MasterBackGround.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
 }
 .topcontent#HeadLogo
 {   
@@ -67,7 +72,7 @@ body
 #masterbody
 {
     position:relative ;
-    top:24em;
+    /*top:24em;*/
     float:right;
     width:100%;
     font-size : 1.5em;
