@@ -2,87 +2,117 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" Runat="Server">
 </asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="LogOnContent" Runat="Server">
+</asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MasterBody" Runat="Server">
-
-<asp:PasswordRecovery
+    <asp:PasswordRecovery
+      runat="server" 
+      ID="PWRecovery"
       OnVerifyingUser="validateUserEmail" 
       SuccessText="Your password was successfully reset and emailed to you."
-      QuestionFailureText="Incorrect answer. Please try again." 
-      runat="server" ID="PWRecovery" 
       UserNameFailureText="Username not found.">
 
-    <MailDefinition 
+        <MailDefinition 
             IsBodyHtml="true" 
             BodyFileName="~/Files/PasswordReset.htm"
             From="YourEmailAddress@YourDomain.com" 
             Subject="Password Reset" 
             Priority="High">
-    </MailDefinition>
+        </MailDefinition>
 
-    <UserNameTemplate>
-        <p>The steps below will allow you to have 
-           a new password sent to the registered email address.</p>
-        <dl>
-            <dt>Username</dt>
-            <dd>
-                <asp:TextBox ID="Username" runat="server" />
-            </dd>
-            <dt>Email</dt>
-            <dd>
-                <asp:TextBox ValidationGroup="PWRecovery" 
-                   runat="server" ID="EmailAddressTB">
-                </asp:TextBox>
-            </dd>
-            <dt></dt>
-            <dd>
-                <asp:Button ID="submit" 
-                   CausesValidation="true" 
-                   ValidationGroup="PWRecovery" 
-                   runat="server"
-                   CommandName="Submit" 
-                   Text="Submit" />
-            </dd>
-            <dt></dt>
-            <dd>
-                <p class="Error"><asp:Literal ID="ErrorLiteral" 
-                         runat="server"></asp:Literal>
-                </p>
-            </dd>
-        </dl>
-    </UserNameTemplate>
-    <QuestionTemplate>
-        Hello
-        <asp:Literal runat="server" ID="personname" />,
-        <p>
-            You must answer your recovery question 
-            in order to have a new email sent to you.
-        </p>
-        <dl>
-            <dt>Question:</dt>
-            <dd>
-                <asp:Literal runat="server" ID="Question" />
-            </dd>
-            <dt></dt>
-            <dt>Answer:</dt>
-            <dd>
-                <asp:TextBox runat="server" ID="Answer" />
-            </dd>
-            <dt></dt>
-            <dd>
-                <asp:Button runat="server" ID="submit" 
-                  Text="Submit" CommandName="submit" />
-            </dd>
-            <dt></dt>
-            <dd>
-                <p class="Error">
-                    <asp:Literal ID="FailureText" runat="server">
-    </asp:Literal>
-    </p>
-            </dd>
-        </dl>
-    </QuestionTemplate>
+        <UserNameTemplate>
+            <table class="tableBLOCK">
+                <tr >
+                    <td>
+                        <p>The steps below will allow you to have <br />
+                        a new password sent to the registered email address.</p>
+                    </td>
+                </tr>
+            <%--</table>--%>
+            <table class="tableBLOCK">                        
+                <tr>
+                    <td>
+                        <img class="ImageLabel" src="../NewImages/LabelUserName.png" alt="username"/>
+                    </td>
+                    <td>
+                        <asp:TextBox  runat="server" class="txtBox" Id="UserName" CssClass="textEntry"></asp:TextBox>
+                    </td>
 
-</asp:PasswordRecovery>
+
+                    <td>
+                        Email Address:
+                        <asp:TextBox 
+                            ValidationGroup="PWRecovery" 
+                            runat="server" 
+                            ID="EmailAddressTB">
+                        </asp:TextBox>
+                    </td>
+
+                </tr>
+            </table>
+            <%--<table class="tableBLOCK">--%>
+                <tr>
+                    <td>
+                        <asp:RequiredFieldValidator 
+                            ID="UserNameRequired" 
+                            runat="server" 
+                            ControlToValidate="UserName" 
+                            CssClass="failureNotification" 
+                            ErrorMessage="User Name is required." 
+                            ToolTip="User Name is required." 
+                            ValidationGroup="PWRecovery">     <%--"PasswordResetUserValidationGroup">*--%>
+                        </asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:RequiredFieldValidator 
+                            ID="EmailRequired" 
+                            runat="server" 
+                            ControlToValidate="EmailAddressTB" 
+                            CssClass="failureNotification" 
+                            ErrorMessage="Email is required." 
+                            ToolTip="Email is required." 
+                            ValidationGroup="PWRecovery">     <%--"PasswordResetUserValidationGroup">*--%>
+                        </asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+
+                    <span class="failureNotification">
+                        <p >
+                        <asp:Literal ID="ErrorLiteral" runat="server"></asp:Literal>
+                        </p>
+                    </span>
+
+                    <%--<asp:ValidationSummary 
+                        ID="PasswordResetUserValidationSummary" 
+                        runat="server" 
+                        CssClass="failureNotification" 
+                        ValidationGroup="PWRecovery">   
+                    </asp:ValidationSummary>--%>
+
+                    </td>
+                </tr>
+            <%--</table>
+            <table class="tableBLOCK">--%>    
+                <tr>
+                    <td>
+                       <asp:Button ID="submit" 
+                       CausesValidation="true" 
+                       ValidationGroup="PWRecovery" 
+                       runat="server"
+                       CommandName="Submit" 
+                       Text="Submit" />
+                    </td>
+                </tr>
+            </table>
+        </UserNameTemplate>
+
+    </asp:PasswordRecovery>
 </asp:Content>
 
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="MasterFooter" Runat="Server">
+</asp:Content>--%>

@@ -1,32 +1,47 @@
 ﻿body 
 {
-    position:relative;
+    position:absolute;
     font-size:62.5%; 
     margin :0px;
     padding :0px;
-    width:100%;
-    height :100%;
+    max-width:100%;
+    max-height :100%;
+    top:0;
     text-align:center;
-    background-color:Black;
-    /*background-image:url('~/NewImages/MasterBackGround.jpg');TO DO fix absolute path to work*/
-    background-image:url('http://localhost:57438/Humat/NewImages/BackGroundMaster.jpg');
+    background-color:Black ;
+    /*background-image:url(../NewImages/BackGroundMaster.jpg);*/
+    background-image:url(../NewImages/Brown.BlueStripes.Clouds.png);
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:center;
 }
-.ImageFrame
+
+*{vertical-align:text-top;}
+
+/*____MAIN PAGE_____________________________________________________________*/
+.CommonPageFrame
 {
+
     border:0
     padding:0;
+    width:30em;
+    margin-left: 33em;
+    margin-bottom:6em;
     text-align:center;
+}
 
-}
-#signOnFrame
+.logOnPanel
 {
-   margin:0 auto;
-   color:Yellow;
-   font-size:3em; 
+    color:White ;
+    font-size:3em;
+    /*
+    border-bottom: 1px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B; 
+    */
 }
+/*___________________________________________________________________________*/
 #BottomFrame
 {
    margin: 0 auto;
@@ -38,25 +53,221 @@
 {
     height:45px;
 }
-.logOnPanel
+/*____MasterBody_____________________________________________________________*/
+.masterbody
 {
-    color:White ;
-    font-size:5em;
+    
+    width:50%;
+    height:30em;
+    margin:0 auto;
+    border-bottom: 1px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B; 
 }
-.logOnGet
-{
-   margin: 0 auto; 
-   color:White ;
-   font-size:5em;   
-}
-input
+
+.logOnGet,  .logOnGet table/*, .logOnGet img , .logOnGet.txtBox*/
 {
 
-    height:35px;
-    background-image:url(http://localhost:57438/Humat/NewImages/TextBoxGeneric.png)
+    width:125%;
+    /*margin-left:auto;
+    margin-right:auto;*/
+    margin: 0 auto; Center block
+    color :Yellow ;
+    text-align :center;
+    /*font-size:2em;*/
+    border-bottom: 1px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B; 
 }
+.logOnGet tr 
+{   left:25em;
+    color:Aqua ;
+    border-bottom: 1px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B; 
+}
+.logOnGet input
+{
+    margin:1.5em;
+    width:15em;
+    height:3em;
+    background-image:url(../NewImages/TextBoxLong.png)
+}
+
+
+.logOnLinks
+{
+    margin: 0 auto 2em; 
+    color:Yellow ; 
+    font-size:3em;
+}
+
+.failureNotification
+{
+    position :relative;
+    /*display:inline-block;*/
+    color:Yellow ;
+    font-size:2em;
+    margin-bottom:1em;
+    border-bottom: 1px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B; 
+}
+
+/*
+.logOnLinks td, .logOnLinks a .logOnLinks label
+{
+    margin: 3 auto; 
+    color:Yellow ;
+    font-size:3em;
+    margin:2em;
+
+    border-bottom: 1px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B; 
+
+}
+    */
+
+
+/*____LOGON PAGE______________________________________________________________*/
+
+   /*
+   color:White ;
+   font-size:2em;  
+    
+    border-bottom: 1px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B; 
+    */
+
+
+
+.logOnGet td
+{
+   /*
+    margin: 0 auto; 
+    text-align:center;
+ 
+    border-bottom: 2px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B;  
+    */
+}
+
+bbbbb
+{
+    padding:2em;
+    
+    border-color:Yellow;
+    border-bottom: 1px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B; 
+}
+
+/*
+    vertical-align:text-top;            
+    
+    border-bottom: 1px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B; 
+    */     
+
+/*
+.logOnLinks tr
+{
+    border:0
+    padding:0;
+    text-align:center;
+    border-bottom: 1px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B; 
+}
+*/
+
+
+.submitButton
+{
+    margin: 0 auto;
+    font-size:2em
+    }
+
+/*__REGISTER PAGE_____________________________________________________________*/
+.ContentHead
+{
+    color:Yellow ;
+    font-size:5em;
+    margin:0;
+    width : 20em;
+    margin-top:1em;
+    /*
+    border-bottom: 2px solid #104A7B;
+    border-right: 1px solid #104A7B;
+    border-left: 1px solid #104A7B;
+    border-top:1px solid #104A7B;
+    */
+}        
+    
+.register ul
+{
+    text-align:left;
+    width:70%;
+    margin:31em;
+    vertical-align:text-bottom;
+} 
+
+.register label
+{
+    display:inline-block;
+    color:Yellow ;
+    font-size:4em;
+    vertical-align:text-bottom;
+    width:8em;
+    height:1.5em;
+
+}
+
+.register input
+{
+    display:inline-block;
+    color:Black ;
+    font-size:3em;
+    vertical-align:text-bottom;
+    margin-right: 20em;
+    text-align:left;
+    height:2em;
+    background-image:url(../NewImages/TextBoxLong.png);  
+}
+/*___________________________________________________________________________*/
+
 #footerContent
 {
     color:White ;
     font-size:2em;    
 }
+
+/*___________________________________________________________________________*/
+#Txb*
+{
+    height:35px;
+}
+
+.txtBox
+{
+    font-size:4em;
+    width:auto ;
+}
+
+/*Image.masterImage.RegisterUserImageFace */
+
+

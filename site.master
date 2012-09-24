@@ -3,103 +3,111 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="Styles/NewStyleSheet.css" rel="stylesheet" type="text/css" />
-    <title></title>
+    <link href="Styles/StyleSheet2.css" rel="stylesheet" type="text/css" />
+    <title>HUMAT</title>
     <asp:ContentPlaceHolder ID="Head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form" runat="server">
-        <asp:ContentPlaceHolder ID="MasterHeader" runat="server">
-            <div class="topcontent">
-    <div Class = "ImageFrame">
-        <div>
 
-                    <asp:Image runat="server" class = "masterImage" id = "Image3" 
-                    ImageUrl="~/NewImages/MainPageFace.png" />
-        </div>
-        </br></br></br>
-        <div>
-                    <asp:Image runat="server" class = "masterImage" id = "Image4" 
-                    ImageUrl="~/NewImages/ButtonExplore.png" />
-        </div>
-        </br></br></br>
-       <%-- SIGNON PANEL --%>
-        <div >
-            <div >
-                <div class="logOnPanel">
-                    <a id="A7" href="~/Account/Login.aspx" runat="server" class="SiteLinkBold">
-                        <asp:LoginView ID="MenuLoginView" runat="server">
-                        <AnonymousTemplate>
-                            Sign In
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            Log Out
-                        </LoggedInTemplate>
-                        </asp:LoginView>
-                    </a>
-                </div>
-                <%--Username/Password --%>
-                <%--<table Id="signOnFrame">
-                    <tr id = "logon" >
-
-                        <td><img src="NewImages/LabelUserName.png" alt="username"/> <img class ="textbox" src="NewImages/TextBoxGeneric.png"  /></td>  
-                        <td><img src="NewImages/LabelPassword.png"/> <img class ="textbox" src="NewImages/TextBoxGeneric.png" /> </td>
-                    </tr>
-                    <tr>
-                        <td><img src="NewImages/CheckBoxLoggedInStatic.png"/> Keep me logged in</td>
-                        <td class="ActionButton" >Forgot my password</td>
-                    </tr>
-                </table>--%>
-            </div>
-        </div>
-
-        <div>
-           </br></br></br>
-            <p class="ActionButton"><img  runat="server" src="~/NewImages/ButtonRegister.png"/></p>
-           </br></br></br>
-        </div>
-
-        <%-- ABOUT & BLOGS PANEL style="text-align:center;style="width:100%;"--%>
-        <div >
-            <div >
-                <table Id="BottomFrame">
-                    <tr>
-                        <td class="ActionButton"><img  runat="server" src="~/NewImages/ButtonWhoWeAre.png" /></td>
-                        <td class="ActionButton"><img  runat="server" src="~/NewImages/ButtonNewsBlog.png" /></td>
-                    </tr>
-                    <tr>
-                        <td><img  runat="server" src="~/NewImages/PanelAbout.png" /></td>
-                        <td><img  runat="server" src="~/NewImages/PanelBlog.png" /></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div> 
-</div>
-        </asp:ContentPlaceHolder>
-
-    <div id="subheader" class="style1">
+    <%--<div id="subheader" class="style1">
         <a id="A1" href="~/Default.aspx" runat="server" title="">Home</a>
         <a id="A2" href="~/Account/ChangePassword.aspx" runat="server" title="">Change password</a>
         <a id="A3" href="~/Account/PasswordReset.aspx" runat="server" title="">Password Reset</a>
         <a id="A4" href="~/Media.aspx" runat="server" title="">Test Email</a>
         <a id="A5" href="~/Account/UserDetails.aspx" runat="server" title="">User Details</a>
         <a id="A6" href="~/AboutUs.aspx" runat="server" title="">About Us</a>
-    </div>
-     
-     <div id="masterbody">
+    </div>--%>
+    
+    <form id="form" runat="server">
+        <asp:ContentPlaceHolder ID="MasterHeader" runat="server">
+            <table class="tableBLOCK">
+                <tr>
+                    <td>
+                        <asp:Image runat="server" id = "face" 
+                        ImageUrl="~/NewImages/MainPageFace.png"  />
+                    </td>
+                </tr>
+            </table>
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="LogOnContent" runat="server">
+                    
+            <%-- SIGNON PANEL --%>
+            <a id="A7" href="~/Account/Login.aspx" runat="server" class="SiteLinkBold">
+                <asp:LoginView ID="MenuLoginView" runat="server">
+                <AnonymousTemplate>
+                    <table class="tableBLOCK">
+                        <tr>
+                            <td >
+                            Sign In
+                            </td>
+                        </tr>
+                    </table>
+
+                        <%--<p class="ActionButton"><img id="Img5"  runat="server" src="~/NewImages/ButtonRegister.png"/></p>--%>
+
+                </AnonymousTemplate>
+                
+                <LoggedInTemplate>
+                    <%--EXPLORE BUTTON  TODO Add padding around button via CSS--%>
+
+
+                        <%--<asp:Image runat="server" class = "masterImage" id = "Image4" 
+                        ImageUrl="~/NewImages/ButtonExplore.png" />--%>
+
+                    <table class="tableBLOCK">
+                        <tr>
+                            <td>
+                             Log Out
+                            </td>
+                        </tr>
+                    </table>
+                </LoggedInTemplate>
+                </asp:LoginView>
+            </a>
+
+        </asp:ContentPlaceHolder>
+
         <asp:ContentPlaceHolder ID="MasterBody" runat="server">
         </asp:ContentPlaceHolder>
-    </div>
 
-    <div id="masterfooter">
+
+
         <asp:ContentPlaceHolder ID="MasterFooter" runat="server">
-            <div id="footerContent">
+        <table class="tableBLOCK">
+            <tr>
+                <td>
+                    <a id = "AboutUsActionButton" href="AboutUs.aspx" runat="server" title="">
+                        <img id="Img1"  runat="server" src="~/NewImages/ButtonWhoWeAre.png" />
+                    </a>
+                </td>
+                <td>
+                    <a id = "BlogNews" href= "NewsCopy.aspx" runat="server" title="">
+                        <img id="Img2"  runat="server" src="~/NewImages/ButtonNewsBlog.png" />
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <table class="tableBLOCK">
+            <tr>
+                    <td><img id="Img3"  runat="server" src="~/NewImages/PanelAbout.png" /></td>
+
+                    <td><img id="Img5"  runat="server" src="~/NewImages/PanelBlog.png" /></td>
+            </tr>
+        </table>
+  
+         <table class="tableBLOCK">
+            <tr>
+                <td>   
                 copyright @ 2012 humat,llc. allrights reserved.
-            </div>
+                </td>
+            </tr>
+        </table>        
         </asp:ContentPlaceHolder>
-    </div>
+    
     </form>
+
 </body>
 </html>

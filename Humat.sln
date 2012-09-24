@@ -1,18 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Humat", "..\..\..\..\..\..\Dev\Humat\", "{D2DD26CE-90E0-42B1-B14C-4591362CD797}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Humat", ".", "{D2DD26CE-90E0-42B1-B14C-4591362CD797}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/Humat"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\Dev\Humat\"
+		Debug.AspNetCompiler.PhysicalPath = "..\Humat\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Humat\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/Humat"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\Dev\Humat\"
+		Release.AspNetCompiler.PhysicalPath = "..\Humat\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Humat\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
@@ -25,10 +25,13 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D2DD26CE-90E0-42B1-B14C-4591362CD797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D2DD26CE-90E0-42B1-B14C-4591362CD797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2DD26CE-90E0-42B1-B14C-4591362CD797}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2DD26CE-90E0-42B1-B14C-4591362CD797}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,79 @@
+﻿body 
+{
+    position:relative;
+    top:0;
+    font-size:62.5%;
+    font-family: verdana, arial, sans-serif;
+    text-align:center;
+    min-width:320;
+    margin:0;
+    padding:0;
+    
+    /*background-image:url(../NewImages/BackGroundMaster.jpg);*/
+    background-color:Black ;
+    background-image:url(../NewImages/Brown.BlueStripes.Clouds.png);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    
+    /*
+    border-bottom: .2em solid Yellow;
+    border-right: .2em solid Yellow;
+    border-left: .2em solid Yellow;
+    border-top:.2em solid Yellow; 
+    */
+    /* screen sizes
+        1024 x 768   desktop
+         320 x 480   Iphone
+
+    */
+    
+}
+asdfasdf
+{
+    border-bottom: .1em solid Yellow;
+    border-right: .1em solid Yellow;
+    border-left: .1em solid Yellow;
+    border-top:.1em solid Yellow; 
+}
+.tableBLOCK, .tableBLOCK a
+{
+          top:0;
+          display:table;
+          margin-left: auto;
+          margin-right: auto;
+          font-size:2em;
+          color:Blue;
+          text-align:center;
+
+          
+}
+
+.tableBLOCK input
+{
+    background-image:url(../NewImages/TextBoxLong.png );
+    vertical-align:text-bottom;
+    font-size:1.5em;
+    /*margin:1.5em;*/
+    width:10em;
+    /*height:1.5em;*/
+
+    border-bottom: .1em solid Yellow;
+    border-right: .1em solid Yellow;
+    border-left: .1em solid Yellow;
+    border-top:.1em solid Yellow; 
+}
+input[type='text']
+{
+   font-size:2em;
+   color:Red 
+}
+
+.failureNotification
+{
+    position :relative;
+    display:block;
+    color:Yellow ;
+    font-size:2em;
+    /*margin-bottom:1em;*/
+}
