@@ -15,31 +15,11 @@
                             <asp:TextBox  runat="server" class="txtBox" Id="UserName" CssClass="textEntry"></asp:TextBox>
                         </td>
 
-                        <%--<asp:RequiredFieldValidator 
-                            ID="UserNameRequired" 
-                            runat="server" 
-                            ControlToValidate="UserName" 
-                            CssClass="failureNotification" 
-                            ErrorMessage="User Name is required." 
-                            ToolTip="User Name is required." 
-                            ValidationGroup="LoginUserValidationGroup">
-                         </asp:RequiredFieldValidator>--%>
-
                         <td>
                             <td><img class="ImageLabel" src="../NewImages/LabelPassword.png"/>
                             <asp:TextBox ID="Password" runat="server"  class="txtBox" CssClass="passwordEntry" TextMode="Password"></asp:TextBox>                
                         </td>
                     </tr>
-
-                        <%--<asp:RequiredFieldValidator 
-                            ID="PasswordRequired" 
-                            runat="server" 
-                            ControlToValidate="Password" 
-                            CssClass="failureNotification" 
-                            ErrorMessage="Password is required." 
-                            ToolTip="Password is required." 
-                            ValidationGroup="LoginUserValidationGroup">
-                         </asp:RequiredFieldValidator>--%>
 
                 </table>
                 <table Class="tableBLOCK">
@@ -50,10 +30,10 @@
                             <asp:Label ID="RememberMeLabel" 
                             runat="server" 
                             AssociatedControlID="RememberMe" 
-                            CssClass="inline">Keep me Logged in.</asp:Label>
+                            CssClass="inline">Keep me Logged in -- </asp:Label>
                         </td>
                         <td>
-                            <a id="A1" class = "LogOnButton" href="~/Account/PasswordReset.aspx" runat="server" title="">Forgot My Password</a>
+                            <a id="A1" class = "LogOnButton" href="~/Account/PasswordReset.aspx" runat="server" title="">Forgot My Password -- </a>
                         </td>
                         <td>
                             <a id="A2" class="LogOnButton" href="~/Account/Register.aspx" runat="server" title="">Register</a>

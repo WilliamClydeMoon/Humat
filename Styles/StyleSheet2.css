@@ -15,37 +15,30 @@
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:center;
-    
-    /*
-    border-bottom: .2em solid Yellow;
-    border-right: .2em solid Yellow;
-    border-left: .2em solid Yellow;
-    border-top:.2em solid Yellow; 
-    */
+
     /* screen sizes
         1024 x 768   desktop
          320 x 480   Iphone
 
     */
-    
 }
-asdfasdf
+wertwertwert
 {
     border-bottom: .1em solid Yellow;
     border-right: .1em solid Yellow;
     border-left: .1em solid Yellow;
     border-top:.1em solid Yellow; 
 }
-.tableBLOCK, .tableBLOCK a
+
+.tableBLOCK   /*CENTER TABLE CSS*/
 {
           top:0;
           display:table;
           margin-left: auto;
           margin-right: auto;
-          font-size:2em;
-          color:Blue;
           text-align:center;
-
+          font-size:2em;
+          
           
 }
 
@@ -54,14 +47,30 @@ asdfasdf
     background-image:url(../NewImages/TextBoxLong.png );
     vertical-align:text-bottom;
     font-size:1.5em;
-    width:10em;
-
-
+    /*width:10em;*/
 }
-input[type='text'], input.text
-{ 
+td p
+{
+    font-size:1.5em;
+    color:Blue; 
+}
+.tableBLOCK a, td label
+{
+    font-size:2em;
+    color:Blue;
+}
 
-    color:Red }
+input[type='text'], input.text 
+{ color:Red }
+
+input[type="checkbox"], input.checkbox
+{
+    color:Red
+    border-bottom: .1em solid Yellow;
+    border-right: .1em solid Yellow;
+    border-left: .1em solid Yellow;
+    border-top:.1em solid Yellow; 
+}
 
 .failureNotification
 {
