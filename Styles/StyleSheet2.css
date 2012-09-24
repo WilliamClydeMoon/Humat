@@ -54,20 +54,14 @@ asdfasdf
     background-image:url(../NewImages/TextBoxLong.png );
     vertical-align:text-bottom;
     font-size:1.5em;
-    /*margin:1.5em;*/
     width:10em;
-    /*height:1.5em;*/
 
-    border-bottom: .1em solid Yellow;
-    border-right: .1em solid Yellow;
-    border-left: .1em solid Yellow;
-    border-top:.1em solid Yellow; 
+
 }
-input[type='text']
-{
-   font-size:2em;
-   color:Red 
-}
+input[type='text'], input.text
+{ 
+
+    color:Red }
 
 .failureNotification
 {
@@ -76,4 +70,17 @@ input[type='text']
     color:Yellow ;
     font-size:2em;
     /*margin-bottom:1em;*/
+}
+
+.TableTabs
+{
+    display:table;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    border-bottom: .1em solid Yellow;
+    border-right: .1em solid Yellow;
+    border-left: .1em solid Yellow;
+    border-top:.1em solid Yellow;   
 }

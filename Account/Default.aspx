@@ -46,7 +46,7 @@
 
 <asp:Content ID="Content4" ContentPlaceHolderID="MasterFooter" Runat="Server">
     <%--<table>
-        <tr class="tableBLOCK">    <%--navagationButtons--%>
+        <tr class="TableTabs">    <%--navagationButtons--%>
             <td>
                 <a id = "AboutUsActionButton" href="AboutUs.aspx" runat="server" title="">
                     <img id="Img1"  runat="server" src="~/NewImages/ButtonWhoWeAre.png" />

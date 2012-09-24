@@ -56,9 +56,10 @@
                             runat="server" 
                             ControlToValidate="UserName" 
                             CssClass="failureNotification" 
+                            Display=None
                             ErrorMessage="User Name is required." 
                             ToolTip="User Name is required." 
-                            ValidationGroup="RegisterUserValidationGroup">*
+                            ValidationGroup="RegisterUserValidationGroup">
                          </asp:RequiredFieldValidator>
                             <table class="tableBLOCK">
                                 <tr>
@@ -75,9 +76,10 @@
                                 runat="server" 
                                 ControlToValidate="Email" 
                                 CssClass="failureNotification" 
+                                Display=None
                                 ErrorMessage="E-mail is required." 
                                 ToolTip="E-mail is required." 
-                                ValidationGroup="RegisterUserValidationGroup">*
+                                ValidationGroup="RegisterUserValidationGroup">
                             </asp:RequiredFieldValidator>
 
                             <table class="tableBLOCK">
@@ -96,10 +98,10 @@
                                ControlToValidate="EmailConfirm" 
                                runat="server"
                                CssClass="failureNotification" 
-                               Display="Dynamic" 
+                               Display=None
                                ErrorMessage="Confirm Email is required." 
                                ToolTip="Confirm Email is required." 
-                               ValidationGroup="RegisterUserValidationGroup">*
+                               ValidationGroup="RegisterUserValidationGroup">
                             </asp:RequiredFieldValidator>                                 
 
                             <asp:CompareValidator 
@@ -108,9 +110,9 @@
                                ControlToCompare="Email" 
                                ControlToValidate="EmailConfirm" 
                                CssClass="failureNotification" 
-                               Display="Dynamic" 
+                               Display=None
                                ErrorMessage="The Email and Confirmation email must match."
-                               ValidationGroup="RegisterUserValidationGroup">*
+                               ValidationGroup="RegisterUserValidationGroup">
                              </asp:CompareValidator>
                                                                                             
 
@@ -128,11 +130,12 @@
                             <asp:RequiredFieldValidator 
                                 ID="PasswordRequired" 
                                 runat="server" 
+                                Display=None
                                 ControlToValidate="Password" 
                                 CssClass="failureNotification" 
                                 ErrorMessage="Password is required." 
                                 ToolTip="Password is required." 
-                                ValidationGroup="RegisterUserValidationGroup">*
+                                ValidationGroup="RegisterUserValidationGroup">
                              </asp:RequiredFieldValidator>
 
                             <table class="tableBLOCK">
@@ -149,12 +152,12 @@
                             <asp:RequiredFieldValidator 
                                 ControlToValidate="ConfirmPassword" 
                                 CssClass="failureNotification" 
-                                Display="Dynamic" 
+                                Display=None
                                 ErrorMessage="Confirm Password is required." 
                                 ID="ConfirmPasswordRequired" 
                                 runat="server" 
                                 ToolTip="Confirm Password is required." 
-                                ValidationGroup="RegisterUserValidationGroup">*
+                                ValidationGroup="RegisterUserValidationGroup">-
                                 </asp:RequiredFieldValidator>
 
                             <asp:CompareValidator 
@@ -163,9 +166,9 @@
                                 ControlToCompare="Password" 
                                 ControlToValidate="ConfirmPassword" 
                                 CssClass="failureNotification" 
-                                Display="Dynamic" 
+                                Display=None
                                 ErrorMessage="The Password and Confirmation Password must match."
-                                ValidationGroup="RegisterUserValidationGroup">*
+                                ValidationGroup="RegisterUserValidationGroup"> 
                             </asp:CompareValidator>
                         <%--</fieldset>--%>
 
@@ -182,7 +185,8 @@
                         </span>
 
                         <asp:ValidationSummary 
-                            ID="RegisterUserValidationSummary" 
+                            ID="RegisterUserValidationSummary"
+                            displaymode="List"
                             runat="server" 
                             CssClass="failureNotification" 
                             ValidationGroup="RegisterUserValidationGroup"

@@ -57,6 +57,7 @@
                         <asp:RequiredFieldValidator 
                             ID="UserNameRequired" 
                             runat="server" 
+                            Display="None"
                             ControlToValidate="UserName" 
                             CssClass="failureNotification" 
                             ErrorMessage="User Name is required." 
@@ -69,7 +70,8 @@
                     <td>
                         <asp:RequiredFieldValidator 
                             ID="EmailRequired" 
-                            runat="server" 
+                            runat="server"
+                            Display="None" 
                             ControlToValidate="EmailAddressTB" 
                             CssClass="failureNotification" 
                             ErrorMessage="Email is required." 
@@ -87,12 +89,13 @@
                         </p>
                     </span>
 
-                    <%--<asp:ValidationSummary 
+                    <asp:ValidationSummary 
                         ID="PasswordResetUserValidationSummary" 
+                        Displaymode="List"
                         runat="server" 
                         CssClass="failureNotification" 
                         ValidationGroup="PWRecovery">   
-                    </asp:ValidationSummary>--%>
+                    </asp:ValidationSummary>
 
                     </td>
                 </tr>

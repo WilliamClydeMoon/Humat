@@ -8,14 +8,6 @@
     <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false" onloggedin="LoginUser_LoggedIn">
         <LayoutTemplate>
 
-            <%--<asp:CustomValidator 
-                id="vldLoginFailed" 
-                runat="server" 
-                ErrorMessage="Login failed. Please check your username and password." 
-                ValidationGroup="loginControl" 
-                Visible="false">
-            </asp:CustomValidator>--%>
-
                 <table class="tableBLOCK">
                     <tr>
                         <td>
@@ -69,19 +61,14 @@
                     </tr>
                     </table>
 
-                    <%--<asp:ValidationSummary 
-                        ID="LoginUserValidationSummary" 
-                        DisplayMode="List"
-                        runat="server" 
-                        CssClass="failureNotification" 
-                        ValidationGroup="LoginUserValidationGroup"
-                    />--%>
+
                     <table class="tableBLOCK">
                     <tr>
                         <td>
                         <asp:RequiredFieldValidator 
                             ID="UserNameRequired" 
                             runat="server" 
+                            Display="None"
                             ControlToValidate="UserName" 
                             CssClass="failureNotification" 
                             ErrorMessage="User Name is required." 
@@ -95,6 +82,7 @@
                         <asp:RequiredFieldValidator 
                             ID="PasswordRequired" 
                             runat="server" 
+                            Display="None"
                             ControlToValidate="Password" 
                             CssClass="failureNotification" 
                             ErrorMessage="Password is required." 
@@ -103,6 +91,15 @@
                          </asp:RequiredFieldValidator> 
                         </td>
                     </tr>
+
+                    <asp:ValidationSummary 
+                        ID="LoginUserValidationSummary" 
+                        DisplayMode="List"
+                        runat="server" 
+                        CssClass="failureNotification" 
+                        ValidationGroup="LoginUserValidationGroup"
+                    />
+
                     <tr>
                         <td>
                         <span class="failureNotification">
