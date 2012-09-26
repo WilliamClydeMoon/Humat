@@ -172,6 +172,26 @@
                             </asp:CompareValidator>
                         <%--</fieldset>--%>
 
+                    <table class="tableBLOCK">
+                    <tr>
+                        <td>
+                            <p>
+                            <asp:ValidationSummary 
+                            ID="RegisterUserValidationSummary"
+                            displaymode="List"
+                            runat="server" 
+                            CssClass="failureNotification" 
+                            ValidationGroup="RegisterUserValidationGroup"
+                        />
+                        </p>
+                        
+
+                        </td>
+                        </tr>
+                        </table>
+
+                        
+
                         <span class="failureNotification">
                             <table class="tableBLOCK">
                                 <tr>
@@ -183,15 +203,6 @@
                                 </tr>
                             </table>
                         </span>
-
-                        <asp:ValidationSummary 
-                            ID="RegisterUserValidationSummary"
-                            displaymode="List"
-                            runat="server" 
-                            CssClass="failureNotification" 
-                            ValidationGroup="RegisterUserValidationGroup"
-                        />
-
 
                             <table class="tableBLOCK">
                                 <tr>
@@ -222,7 +233,4 @@
     </asp:CreateUserWizard>
 </asp:Content>
 
-
-<%--<asp:Content ID="Content4" ContentPlaceHolderID="MasterFooter" Runat="Server">
- </asp:Content>--%>
 

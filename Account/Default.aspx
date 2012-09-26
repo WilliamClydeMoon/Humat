@@ -3,68 +3,57 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MasterBody" Runat="Server">
-    <%--<table class="tableBLOCK" >
-        <tr>    <%--masterimage--%>
+    <table class="tableBLOCK" >
+        <tr>
             <td>
-                <img src="../NewImages/MainPageFace.png" />
+                <img src="../NewImages/MainPageFace.png" alt="" />
             </td>
         </tr>
      </table>--%>   
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="LogOnContent" Runat="Server">
-     <%--<table class="tableBLOCK">
-        <tr>    <%--masterActionArea--%>
+     <table class="tableBLOCK">
+        <tr>    
             <td>
-
                  <a id="A7" href="~/Account/Login.aspx" runat="server" class="SiteLinkBold">
                     <asp:LoginView ID="MenuLoginView" runat="server">
-                    <%--SIGN IN--%>
                     <AnonymousTemplate>
-                        Sign In
-                        <%--<div>
-                            <p class="ActionButton"><img id="Img5"  runat="server" src="~/NewImages/ButtonRegister.png"/></p>
-                        </div>--%>
+                        Sign In Default
                     </AnonymousTemplate>
-                    <%--SIGN OUT--%>
-                    <LoggedInTemplate>
-                        <%--EXPLORE BUTTON  TODO Add padding around button via CSS--%>
-                        <div>
-                            <asp:Image runat="server" class = "masterImage" id = "Image4" 
-                            ImageUrl="~/NewImages/ButtonExplore.png" />
-                        </div>
-                        Log Out
 
+                    <LoggedInTemplate>
+                        Log Out
                     </LoggedInTemplate>
                     </asp:LoginView>
                 </a>
 
             </td>
         </tr>
-     </table>--%>
+     </table>
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="MasterFooter" Runat="Server">
-    <%--<table>
+    <table>
         <tr class="TableTabs">    <%--navagationButtons--%>
             <td>
                 <a id = "AboutUsActionButton" href="AboutUs.aspx" runat="server" title="">
-                    <img id="Img1"  runat="server" src="~/NewImages/ButtonWhoWeAre.png" />
+                    <img id="Img1"  runat="server" src="~/NewImages/ButtonWhoWeAre.png" alt="" />
                 </a>
             </td>
             <td>
                 <a id = "BlogNews" href= "NewsCopy.aspx" runat="server" title="">
-                    <img id="Img2"  runat="server" src="~/NewImages/ButtonNewsBlog.png" />
+                    <img id="Img2"  runat="server" src="~/NewImages/ButtonNewsBlog.png" alt="" />
                 </a>
             </td>                        
         </tr>
 
         <tr class="tableBLOCK">    <%--PanelInfo--%>
             <td>
-                <img src="../NewImages/PanelAbout.png" />
+                <img src="../NewImages/PanelAbout.png" alt=""  />
             </td>
             <td>
-                <img src="../NewImages/PanelBlog.png" />
+                <img src="../NewImages/PanelBlog.png" alt=""  />
             </td>                        
         </tr>
         <tr>
@@ -72,7 +61,7 @@
                 copyright @ 2012 humat,llc. allrights reserved.
             </td>
         </tr>
-    </table>--%>
+    </table>
 
 </asp:Content>
 

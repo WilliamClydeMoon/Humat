@@ -38,6 +38,7 @@ public partial class Account_PasswordReset : System.Web.UI.Page
                 //appCookie.Value = newProfile.FullName;
                 appCookie.Expires = DateTime.Now.AddMinutes(3);
                 Response.Cookies.Add(appCookie);
+                ErrorLiteral.Text = "An email has been sent to your email account with a new password.";
             }
             else
             {

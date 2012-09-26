@@ -7,21 +7,43 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MasterBody" Runat="Server">
     <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false" onloggedin="LoginUser_LoggedIn">
         <LayoutTemplate>
-
+            <%--<fieldset class="login">--%>
                 <table class="tableBLOCK">
                     <tr>
                         <td>
-                            <img class="ImageLabel" src="../NewImages/LabelUserName.png" alt="username"/>
+                            <img class="ImageLabel" src="../NewImages/LabelUserName.png" alt="" />
+                        </td>
+                        <td>
                             <asp:TextBox  runat="server" class="txtBox" Id="UserName" CssClass="textEntry"></asp:TextBox>
                         </td>
+                        <asp:RequiredFieldValidator 
+                            ID="UserNameRequired" 
+                            runat="server" 
+                            Display="None"
+                            ControlToValidate="UserName" 
+                            CssClass="failureNotification" 
+                            ErrorMessage="User Name is required." 
+                            ToolTip="User Name is required." 
+                            ValidationGroup="LoginUserValidationGroup">
+                         </asp:RequiredFieldValidator>
+                        
+                            <td><img class="ImageLabel" src="../NewImages/LabelPassword.png" alt="" /></td>
+                            <td><asp:TextBox ID="Password" runat="server"  class="txtBox" CssClass="passwordEntry" TextMode="Password"></asp:TextBox></td>                
 
-                        <td>
-                            <td><img class="ImageLabel" src="../NewImages/LabelPassword.png"/>
-                            <asp:TextBox ID="Password" runat="server"  class="txtBox" CssClass="passwordEntry" TextMode="Password"></asp:TextBox>                
-                        </td>
+                        <asp:RequiredFieldValidator 
+                            ID="PasswordRequired" 
+                            runat="server" 
+                            Display="None"
+                            ControlToValidate="Password" 
+                            CssClass="failureNotification" 
+                            ErrorMessage="Password is required." 
+                            ToolTip="Password is required." 
+                            ValidationGroup="LoginUserValidationGroup">
+                         </asp:RequiredFieldValidator>
                     </tr>
 
                 </table>
+                <%--</fieldset >--%>
                 <table Class="tableBLOCK">
                     <tr> 
                         <td>
@@ -45,42 +67,15 @@
                     <table class="tableBLOCK">
                     <tr>
                         <td>
-                        <asp:RequiredFieldValidator 
-                            ID="UserNameRequired" 
+                        <asp:ValidationSummary 
+                            ID="LoginUserValidationSummary" 
+                            DisplayMode="List"
                             runat="server" 
-                            Display="None"
-                            ControlToValidate="UserName" 
                             CssClass="failureNotification" 
-                            ErrorMessage="User Name is required." 
-                            ToolTip="User Name is required." 
-                            ValidationGroup="LoginUserValidationGroup">
-                         </asp:RequiredFieldValidator>
+                            ValidationGroup="LoginUserValidationGroup"
+                        />
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        <asp:RequiredFieldValidator 
-                            ID="PasswordRequired" 
-                            runat="server" 
-                            Display="None"
-                            ControlToValidate="Password" 
-                            CssClass="failureNotification" 
-                            ErrorMessage="Password is required." 
-                            ToolTip="Password is required." 
-                            ValidationGroup="LoginUserValidationGroup">
-                         </asp:RequiredFieldValidator> 
-                        </td>
-                    </tr>
 
-                    <asp:ValidationSummary 
-                        ID="LoginUserValidationSummary" 
-                        DisplayMode="List"
-                        runat="server" 
-                        CssClass="failureNotification" 
-                        ValidationGroup="LoginUserValidationGroup"
-                    />
-
-                    <tr>
                         <td>
                         <span class="failureNotification">
                             <asp:Literal ID="FailureText" runat="server"></asp:Literal>
@@ -103,7 +98,7 @@
                             />
                         </td>
                     </tr>
-                </table>
+                    </table>
         </LayoutTemplate>
     </asp:Login>
     

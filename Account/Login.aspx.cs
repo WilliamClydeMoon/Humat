@@ -17,28 +17,18 @@ public partial class Account_Login : System.Web.UI.Page
                 Session["LoginReferrer"] = Page.Request.UrlReferrer.ToString();
             }
         }
-
         if (User.Identity.IsAuthenticated)
         {
             FormsAuthentication.SignOut();
             Response.Redirect("~/");
-
         }
-
     }
-
     protected void LoginUser_LoggedIn(object sender, EventArgs e)
     {
-
-
         if (Session["LoginReferrer"] != null)
         {
             Response.Redirect(Session["LoginReferrer"].ToString());
         }
-
         Session["UserName"] = LoginUser.UserName;
     }
-
-
-
 }

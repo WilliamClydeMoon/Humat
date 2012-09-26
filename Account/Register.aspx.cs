@@ -32,6 +32,8 @@ public partial class Account_Register : System.Web.UI.Page
         //string absoluteuri = Request.Url.AbsoluteUri;
         //string LeftPart = Request.Url.GetLeftPart(UriPartial.Authority);
         //string resolve = Page.ResolveUrl("~/Account/RegisterConfirmation.aspx");
+        //HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]
+        //Page.Request.UrlReferrer.ToString();
 
         String VerifyUrl = 
             Request.Url.GetLeftPart(UriPartial.Authority) +

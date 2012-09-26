@@ -1,4 +1,10 @@
-﻿body 
+﻿*
+{
+    margin:0;
+    padding:0;
+    /*box-sizing:border-box;*/
+  }
+body 
 {
     position:relative;
     top:0;
@@ -6,9 +12,11 @@
     font-family: verdana, arial, sans-serif;
     text-align:center;
     min-width:320;
-    margin:0;
-    padding:0;
-    
+    /*margin:0;
+    padding:0;*/
+
+
+
     /*background-image:url(../NewImages/BackGroundMaster.jpg);*/
     background-color:Black ;
     background-image:url(../NewImages/Brown.BlueStripes.Clouds.png);
@@ -22,14 +30,14 @@
 
     */
 }
-wertwertwert
+/*
 {
     border-bottom: .1em solid Yellow;
     border-right: .1em solid Yellow;
     border-left: .1em solid Yellow;
     border-top:.1em solid Yellow; 
 }
-
+*/
 .tableBLOCK   /*CENTER TABLE CSS*/
 {
           top:0;
@@ -38,16 +46,15 @@ wertwertwert
           margin-right: auto;
           text-align:center;
           font-size:2em;
-          
-          
 }
 
 .tableBLOCK input
 {
     background-image:url(../NewImages/TextBoxLong.png );
-    vertical-align:text-bottom;
     font-size:1.5em;
+    vertical-align:text-top;
     /*width:10em;*/
+    
 }
 td p
 {
@@ -66,10 +73,6 @@ input[type='text'], input.text
 input[type="checkbox"], input.checkbox
 {
     color:Red
-    border-bottom: .1em solid Yellow;
-    border-right: .1em solid Yellow;
-    border-left: .1em solid Yellow;
-    border-top:.1em solid Yellow; 
 }
 
 .failureNotification
@@ -88,8 +91,4 @@ input[type="checkbox"], input.checkbox
     margin-left: auto;
     margin-right: auto;
     text-align:center;
-    border-bottom: .1em solid Yellow;
-    border-right: .1em solid Yellow;
-    border-left: .1em solid Yellow;
-    border-top:.1em solid Yellow;   
 }

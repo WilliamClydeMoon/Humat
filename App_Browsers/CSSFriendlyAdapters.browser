@@ -15,8 +15,8 @@
 					 adapterType="CSSFriendly.GridViewAdapter" />
 			<adapter controlType="System.Web.UI.WebControls.ChangePassword"
 					 adapterType="CSSFriendly.ChangePasswordAdapter" />
-			<adapter controlType="System.Web.UI.WebControls.Login"
-					 adapterType="CSSFriendly.LoginAdapter" />
+			<!--<adapter controlType="System.Web.UI.WebControls.Login"
+					 adapterType="CSSFriendly.LoginAdapter" />-->
 			<adapter controlType="System.Web.UI.WebControls.LoginStatus"
 					 adapterType="CSSFriendly.LoginStatusAdapter" />
 			<!--<adapter controlType="System.Web.UI.WebControls.CreateUserWizard"

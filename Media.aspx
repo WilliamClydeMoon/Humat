@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MasterBody" Runat="Server">
 <li class="construction"><b>Soon to come! </b><br /> This page is in construction.</li>
-<table border="0">
+<table >
     <tr>
         <td><b>Your Email:</b></td>
         <td><asp:TextBox runat="server" ID="UsersEmail" Columns="30"></asp:TextBox></td>

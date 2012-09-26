@@ -22,6 +22,7 @@
         </MailDefinition>
 
         <UserNameTemplate>
+
             <table class="tableBLOCK">
                 <tr >
                     <td>
@@ -36,24 +37,14 @@
                         <img class="ImageLabel" src="../NewImages/LabelUserName.png" alt="username"/>
                     </td>
                     <td>
-                        <asp:TextBox  runat="server" class="txtBox" Id="UserName" CssClass="textEntry"></asp:TextBox>
-                    </td>
-
-
-                    <td>
-                        Email Address:
-                        <asp:TextBox 
-                            ValidationGroup="PWRecovery" 
+                        <asp:TextBox  
                             runat="server" 
-                            ID="EmailAddressTB">
+                            class="txtBox" 
+                            Id="UserName" 
+                            CssClass="textEntry">
                         </asp:TextBox>
                     </td>
 
-                </tr>
-            </table>
-            <%--<table class="tableBLOCK">--%>
-                <tr>
-                    <td>
                         <asp:RequiredFieldValidator 
                             ID="UserNameRequired" 
                             runat="server" 
@@ -64,10 +55,17 @@
                             ToolTip="User Name is required." 
                             ValidationGroup="PWRecovery">     <%--"PasswordResetUserValidationGroup">*--%>
                         </asp:RequiredFieldValidator>
-                    </td>
-                </tr>
-                <tr>
+
                     <td>
+                        <p>Email Address:</p>
+                    </td>
+                    <td>
+                        <asp:TextBox 
+                            ValidationGroup="PWRecovery" 
+                            runat="server" 
+                            ID="EmailAddressTB">
+                        </asp:TextBox>
+                    </td>
                         <asp:RequiredFieldValidator 
                             ID="EmailRequired" 
                             runat="server"
@@ -78,8 +76,10 @@
                             ToolTip="Email is required." 
                             ValidationGroup="PWRecovery">     <%--"PasswordResetUserValidationGroup">*--%>
                         </asp:RequiredFieldValidator>
-                    </td>
                 </tr>
+            </table>
+            <%--<table class="tableBLOCK">--%>
+            <table class="tableBLOCK">
                 <tr >
                     <td>
 
@@ -99,7 +99,7 @@
 
                     </td>
                 </tr>
-            <%--</table>
+            </table>
             <table class="tableBLOCK">--%>    
                 <tr>
                     <td>
